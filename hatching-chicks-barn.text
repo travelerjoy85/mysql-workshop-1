@@ -1,0 +1,48 @@
+CREATE DATABASE hatching_chick;
+
+SHOW DATABASES;
+
++-----------------------+
+| Database              |
++-----------------------+
+| information_schema    |
+| c9                    |
+| decodemtl_addressbook |
+| hatching_chick        |
+| mysql                 |
+| performance_schema    |
++-----------------------+
+
+
+mysql> USE hatching_chick;
+
+CREATE TABLE barn (id int NOT NULL AUTO_INCREMENT, PRIMARY KEY(id) );
+
+mysql> SHOW TABLES;
++--------------------------+
+| Tables_in_hatching_chick |
++--------------------------+
+| barn                     |
++--------------------------+
+
+ALTER TABLE barn ADD COLUMN gender ENUM('rooster', 'hen') NOT NULL;
+mysql> DESCRIBE barn;
++--------+-----------------------+------+-----+---------+----------------+
+| Field  | Type                  | Null | Key | Default | Extra          |
++--------+-----------------------+------+-----+---------+----------------+
+| id     | int(11)               | NO   | PRI | NULL    | auto_increment |
+| gender | enum('rooster','hen') | NO   |     | NULL    |                |
++--------+-----------------------+------+-----+---------+----------------+
+
+ALTER TABLE barn ADD COLUMN birthdate DATETIME  NOT NULL;
+ALTER TABLE barn ADD COLUMN deathdate DATETIME;
+
+mysql> DESCRIBE barn;
++-----------+-----------------------+------+-----+---------+----------------+
+| Field     | Type                  | Null | Key | Default | Extra          |
++-----------+-----------------------+------+-----+---------+----------------+
+| id        | int(11)               | NO   | PRI | NULL    | auto_increment |
+| gender    | enum('rooster','hen') | NO   |     | NULL    |                |
+| birthdate | datetime              | NO   |     | NULL    |                |
+| deathdate | datetime              | YES  |     | NULL    |                |
++-----------+-----------------------+------+-----+---------+----------------+
