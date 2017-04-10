@@ -40,3 +40,6 @@ CREATE TABLE Test (
 
 Exercise 6
 drop table if exists Test
+
+Exercise 7
+show tables
