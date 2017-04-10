@@ -4,3 +4,6 @@ mysql -uflyingartistjoy
 
 Exercise 2
 create database + databaseName
+
+Exercise 3
+DROP DATABASE + database name
