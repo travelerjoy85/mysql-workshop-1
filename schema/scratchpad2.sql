@@ -1,17 +1,3 @@
-Exercise 1
-mysql-ctl start
-mysql -uflyingartistjoy
-
-Exercise 2
-create database + databaseName
-
-Exercise 3
-DROP DATABASE + database name
-
-Exercise 4
-SHOW DATABASES: to return the databases in mysql
-
-Exercise 5
 CREATE TABLE Account (
     id INT AUTO_INCREMENT PRIMARY KEY,
     firstName VARCHAR(30),
