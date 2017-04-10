@@ -7,3 +7,6 @@ create database + databaseName
 
 Exercise 3
 DROP DATABASE + database name
+
+Exercise 4
+SHOW DATABASES: to return the databases in mysql
