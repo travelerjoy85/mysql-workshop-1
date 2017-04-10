@@ -1,3 +1,6 @@
 Exercise 1
 mysql-ctl start
 mysql -uflyingartistjoy
+
+Exercise 2
+create database + databaseName
