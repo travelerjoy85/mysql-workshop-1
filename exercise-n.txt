@@ -37,3 +37,6 @@ CREATE TABLE Test (
     firstName VARCHAR(30),
     lastName VARCHAR(30)
 );
+
+Exercise 6
+drop table if exists Test
