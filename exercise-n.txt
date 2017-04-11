@@ -72,3 +72,29 @@ CREATE TABLE Entry (
     entryType ENUM('home', 'work', 'other'),
     subType ENUM('phone', 'address', 'email')
 );
+
+Exercise 9:
+
+1. Create database call chicken_barn: CREATE DATABASE chicken_barn
+2. Switch to the new database: use chicken_barn
+3. Creating a table as below:
+CREATE TABLE chicken (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	chickenType ENUM('rooster', 'hen', 'chicks'),
+	bornOnDate DATETIME,
+	terminalDate DATETIME
+);
+Question 1:
+How many rooster, hen and chicks existed in the Barn on a specific date
+Answer:
+SELECT * FROM chicken // SELECT + type
+WHERE bornOnDate <= NOW() AND terminalDate > NOW() // This is to count all the chickens during this period
+GROUP BY chickenType // This is to sort out the types
+
+Question 2:
+How many chicks will come to age on a specific date
+Answer:
+I assume that every chick becomes a rooster/hen after 21 days it was born:
+SELECT * FROM chicken WHERE bornOnDate + 21 DAYS = "a specific date"
+
+
